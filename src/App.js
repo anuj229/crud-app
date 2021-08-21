@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Link
@@ -17,7 +17,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <AppProvider>
-      <Router>
+      <HashRouter>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/create" exact component={Create} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/edit/:id" exact component={Edit} />
           <Route path="/delete/:id" exact component={Delete} />
         </Switch>
-      </Router>
+      </HashRouter>
     </AppProvider>
   );
 }
